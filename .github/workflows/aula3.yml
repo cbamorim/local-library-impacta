@@ -24,7 +24,7 @@ jobs:
     runs-on: windows-latest
    
     steps:
-      - name: Passo 1
+      - name: Passo 2
         run: env | sort
         
    jobs3:
@@ -32,17 +32,16 @@ jobs:
      runs-on: marcos-latest
      
       steps:
-      - name: Passo 1
+      - name: Passo 3
         run: env | sort
      
    jobs4:
      name: Quarto job
      runs-on: windows-latest
-    
-    needs: [job1, job2, job3]
+     needs: [job1, job2, job3]
    
     steps:
-      - name: Passo 1
+      - name: Passo 4
         run: env | sort
     
   
