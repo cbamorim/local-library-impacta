@@ -37,8 +37,7 @@ jobs:
      
    jobs4:
      name: Quarto job
-     runs-on: windows-latest
-     needs: [job1, job2, job3]
+         needs: [job1, job2, job3]
    
       steps:
        - name: Passo 4
