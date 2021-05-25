@@ -26,14 +26,14 @@ jobs:
         run: date
  
   job3:
-    name: terceiro Job
+    name: Terceiro Job
     runs-on: marcos-latest
     steps:
       - name: Passo 3
         run: date
         
   job4:
-    name: Terceiro Job
+    name: Quarto Job
     runs-on: windows-latest
     needs: [job1, job2, job3]
     
