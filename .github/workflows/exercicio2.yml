@@ -11,9 +11,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 12
-      JOB_VAR: 'minha variavel no escopo do job'
       
     steps:
     
