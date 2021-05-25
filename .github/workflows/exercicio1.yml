@@ -1,6 +1,5 @@
-
-name: exercicio 1
-
+  
+name: Exercicio 1
 
 on:
   push:
@@ -8,39 +7,37 @@ on:
   pull_request:
     branches: [ main ]
 
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-  jobs1: 
-    name: Primeiro job
-    runs-on: ubuntu-laster
-    
-     steps:
+  job1:
+    name: Primeiro Job
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Passo 1
         run: date
-        
-   jobs2:
-    name: Segundo job
+  
+  job2:
+    name: Segundo Job
     runs-on: windows-latest
-   
-     steps:
-      - name: Passo 1
+    steps:
+      - name: Passo 2
+        run: date
+ 
+  job3:
+    name: terceiro Job
+    runs-on: marcos-latest
+    steps:
+      - name: Passo 3
         run: date
         
-   jobs3:
-     name: Terceiro job
-     runs-on: marcos-latest
-     
-      steps:
-       - name: Passo 1
-         run: date
-     
-   jobs4:
-     name: Quarto job
-     needs: [job1, job2, job3]
-   
-      steps:
-       - name: Passo 1
-         run: date
+  job4:
+    name: Terceiro Job
+    runs-on: windows-latest
+    needs: [job1, job2, job3]
     
+    steps:
+      - name: Ultimo passo
+        run: date
   
