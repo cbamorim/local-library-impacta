@@ -24,7 +24,7 @@ jobs:
     runs-on: windows-latest
    
      steps:
-      - name: Passo 2
+      - name: Passo 1
         run: date
         
    jobs3:
@@ -32,15 +32,15 @@ jobs:
      runs-on: marcos-latest
      
       steps:
-       - name: Passo 3
+       - name: Passo 1
          run: date
      
    jobs4:
      name: Quarto job
-         needs: [job1, job2, job3]
+     needs: [job1, job2, job3]
    
       steps:
-       - name: Passo 4
+       - name: Passo 1
          run: date
     
   
