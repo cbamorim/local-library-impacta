@@ -17,7 +17,7 @@ jobs:
     
      steps:
       - name: Passo 1
-        run: env | sort
+        run: date
         
    jobs2:
     name: Segundo job
@@ -25,7 +25,7 @@ jobs:
    
      steps:
       - name: Passo 2
-        run: env | sort
+        run: date
         
    jobs3:
      name: Terceiro job
@@ -33,7 +33,7 @@ jobs:
      
       steps:
        - name: Passo 3
-         run: env | sort
+         run: date
      
    jobs4:
      name: Quarto job
@@ -42,6 +42,6 @@ jobs:
    
       steps:
        - name: Passo 4
-         run: env | sort
+         run: date
     
   
