@@ -27,7 +27,7 @@ jobs:
  
   job3:
     name: Terceiro Job
-    runs-on: marcos-latest
+    runs-on: macos-latest
     steps:
       - name: Passo 3
         run: date
