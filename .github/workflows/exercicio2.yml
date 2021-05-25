@@ -12,8 +12,12 @@ jobs:
   build:
     name: Build and Test
     runs-on: windows-latest
+  
+     strategy:
+      artefato:
+        node-version: [10.x, 12.x, 14.x]
 
-     steps: 
+     steps:     
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ artefato.node-version }}
       uses: actions/setup-node@v1
