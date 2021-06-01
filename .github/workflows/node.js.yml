@@ -43,7 +43,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: app-impacta-cbamorim
+          heroku_app_name: app-impacta-cbamorim-hom
           heroku_email: wellyngton.amorim1995@gmail.com
           justlogin: true
       
@@ -63,7 +63,7 @@ jobs:
       DB_URI: $${{ secrets.DB_URI }}
       NODE_ENV: production
       
-    needs: [deploy-homologacao]
+    needs: [deploy]
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
