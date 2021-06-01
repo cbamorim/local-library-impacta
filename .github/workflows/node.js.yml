@@ -25,7 +25,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test --if-present  
     
-  deploy-homologação:
+  deploy-homologacao:
     runs-on: ubuntu-latest
     env:
       DB_URI: $${{ secrets.DB_URI }}
@@ -62,7 +62,7 @@ jobs:
       DB_URI: $${{ secrets.DB_URI }}
       NODE_ENV: production
       
-    needs: [deploy-homologação]
+    needs: [deploy-homologacao]
     environment: produçao
     steps:
     - name: Checkout Code
