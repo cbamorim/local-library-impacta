@@ -63,7 +63,8 @@ jobs:
       DB_URI: $${{ secrets.DB_URI }}
       NODE_ENV: production
       
-    needs: [deploy]
+    needs: [deploy-homologação]
+    environment: produçao
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
